@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/js/bootstrap.bundle.js">
+    <title>Document</title>
+</head>
+
+<body>
+    <main class="w-25 shadow rounded p-3 mx-auto">
+        <h1>Number of days in a Month</h1>
+        <input  class="form-control my-3 py-3"  type="text" id="Days">
+        <button class="btn btn-primary" onclick="Month()"> Check Days</button>
+        <div id="display"></div>
+    </main>
+</body>
+
+</html>
+<script>
+    function Month() {
+        let Month = document.getElementById('Days').value.trim().toLowerCase();
+        // let Monthinput = Month.topperCase()
+
+
+        if (Month === "january" || Month === "march" || Month === "may" || Month === "july" || Month === "august" || Month === "october" || Month === "december") {
+            console.log('31 Days')
+            document.getElementById('display').innerHTML = "31 days"
+            // display.innerHTML = '31 Days'
+        } else if (Month === "september" || Month === "april" || Month === "june" || Month === "november") {
+            console.log('30 Days')
+            document.getElementById('display').innerHTML = "30 days"
+            // display.innerHTML = '30 Days'
+        } else if (Month === "february") {
+            console.log('28 Days')
+             document.getElementById('display').innerHTML = "28 days"
+            // display.innerHTML = '28 Days'
+        } else if(Month === ""){
+            alert('Please enter a month')
+        }
+        else {
+            // display.innerHTML = 'Invalid input'
+              document.getElementById('display').innerHTML = "Invalid Month"
+            // alert('Invalid Input')
+        }
+
+    }
+
+
+</script>
